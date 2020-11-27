@@ -1,0 +1,53 @@
+@import 'variables.scss';
+
+.icon-facebook,
+.icon-facebook\:regular {
+    background-image: url('../images/icons.svg');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.socials__item:hover .icon-facebook {
+    background-position: 0 -21px;
+}
+
+.icon-facebook-dims {
+    width: 12px;
+    height: 21px
+}
+
+
+.icon-inst,
+.icon-inst\:regular {
+    background-image: url('../images/icons.svg');
+    background-position: 0 -42px;
+    background-repeat: no-repeat;
+}
+
+.icon-inst-dims {
+    width: 18px;
+    height: 18px
+}
+
+.socials__item:hover .icon-inst {
+        background-position: 0 -60px;
+}
+
+.icon-twitter,
+.icon-twitter\:regular {
+    background-image: url('../images/icons.svg');
+    background-position: 0 -78px;
+    background-repeat: no-repeat
+}
+
+.socials__item:hover .icon-twitter {
+    background-position: 0 -96px;
+
+}
+
+.icon-twitter-dims {
+    width: 20px;
+    height: 18px
+}
+
+

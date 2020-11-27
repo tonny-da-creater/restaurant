@@ -1,0 +1,67 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+.book-table {
+    padding-top: 100px;
+    
+    &__form {
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    
+    &__description {
+        margin-right: 90px;
+    }
+    
+    &__btn {
+        margin: 0 5px;
+    }
+    
+    .book-table__img-wrapper {
+        .img-wrapper__elem {
+            right: 0;
+        }
+    }
+}
+
+
+@media all and (max-width: 900px) {
+    .book-table {
+        margin-right: 0;
+        
+        &__row {
+            justify-content: center;
+        }
+        
+        img {
+            display: none;
+        }
+        
+        .img-wrapper {
+            display: none;
+            &__elem {
+                display: none;
+            }
+        }
+        
+        .description {
+            flex: 0 1 90%;
+            margin-right: 0;
+        }
+        
+    }
+}
+
+@media all and (max-width: 768px) {
+    .book-table {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        
+        .info {
+            display: none;
+        }
+    }
+}
+
+
+

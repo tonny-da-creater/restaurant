@@ -1,0 +1,28 @@
+.footer {
+    background-color: black;
+    color: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__text {
+        font-family: 'OpenSans';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.5);
+        
+        span {
+            color: lightgray;
+            margin: 0 6px;
+        }
+    }
+}
+
+
+@media all and (max-width: 768px) {
+    .footer {
+        height: 50px;
+    }
+}

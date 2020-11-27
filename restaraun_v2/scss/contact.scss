@@ -1,0 +1,119 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+.contact {
+    padding: 100px 0;
+
+    &__row {
+        flex-direction: column;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    &__text {
+        max-width: 550px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    &__form {
+        margin-top: 50px;
+
+        input {
+            flex: 1 1 30%;
+        }
+
+        textarea {
+            flex: 1 1 auto;
+            padding-top: 25px;
+            resize: none;
+        }
+    }
+
+}
+
+.form-bottom {
+    display: flex;
+    padding: 5px 5px;
+
+    &__contacts {
+        flex: 0 0 50%;
+        padding-right: 45px;
+
+        .contacts-wrapper {
+            display: flex;
+            height: 100%;
+            flex-wrap: wrap;
+
+            p {
+                display: flex;
+                align-items: center;
+                padding-right: 15px;
+            }
+
+            i {
+                color: $main-color;
+                font-size: 12px;
+            }
+
+            a {
+                text-decoration: none;
+                color: gray;
+                font-size: 13px;
+                margin-left: 8px;
+                font-family: 'OpenSans';
+                font-weight: normal;
+            }
+        }
+
+    }
+
+    &__btn {
+        flex: 1 1 50%;
+    }
+}
+
+@media all and (max-width: 768px) {
+    
+    .contact {
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+    
+    .contacts-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    .form-bottom {
+        flex-direction: column;
+
+        &__btn {
+            flex: 1 0 100%;
+            order: 1;
+            padding: 20px 0;
+        }
+
+        &__contacts {
+            order: 2;
+            flex: 0;
+            margin-top: 20px;
+            justify-content: center;
+            display: flex;
+        }
+
+        p {
+            margin-bottom: 25px;
+        }
+    }
+}
+

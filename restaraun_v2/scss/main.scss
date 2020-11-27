@@ -1,0 +1,157 @@
+@import 'header.scss';
+@import 'team.scss';
+@import 'about.scss';
+@import 'book-table.scss';
+@import 'specialties.scss';
+@import 'slick.scss';
+@import 'menu.scss';
+@import 'events.scss';
+@import 'gallery.scss';
+@import 'map.scss';
+@import 'contact.scss';
+@import 'footer.scss';
+//@import 'normalize.scss';
+@import 'fonts.scss';
+@import 'sprite.scss';
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.row {
+    display: flex;
+}
+
+.left-line {
+    position: absolute;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 100%;
+    left: 19%;
+}
+
+.middle-line-top {
+    position: absolute;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    left: 50%;
+}
+
+.right-line {
+    position: absolute;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 100%;
+    right: 19%;
+}
+
+a {
+    text-decoration: none;
+    text-decoration: none;
+    color: rgba(51, 51, 51, 0.5);
+}
+
+.title {
+    @include title;
+}
+
+.subtitle {
+    font-size: 12px;
+    letter-spacing: 0.5em;
+    position: relative;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+ .btn {
+        @include btn;
+    }
+
+.img-wrapper {
+    @include img-wrapper;
+}
+
+.description {
+    @include description;
+}
+
+
+.color-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: .6;
+    top: 0;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    
+    input, select, option, textarea {
+        flex: 1 1 40%;
+        min-height: 60px;
+        background: #E5E5E5;
+        border-radius: 5px;
+        border: 0;
+        margin: 5px;
+        color: rgba(51, 51, 51, 0.6);
+        text-indent: 20px;
+        font-size: 14px;
+    }
+    
+    option {
+        &:first-child {
+            display: none;
+        }
+    }
+}
+
+.info {
+    margin: 45px auto;
+    text-align: center;
+    font-size: 12px;
+    line-height: 12px;
+    
+    &__text {
+        color: rgba(51, 51, 51, 0.5);
+        font-weight: normal;
+        
+        
+         span {
+            font-weight: bold;
+        }
+
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media all and (max-width: 768px) {
+    .left-line, .right-line, .middle-line-top {
+        display: none;
+    }
+    
+}
+
+

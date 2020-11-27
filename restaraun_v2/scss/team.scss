@@ -1,0 +1,73 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+.team {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/specialtys-bg.jpg) no-repeat center/cover;
+    position: relative;
+    
+    &__middle-line-top {
+        height: 100%;
+    }
+    
+    
+    &__row {
+        justify-content: center;
+        padding-top: 46px;
+        padding-bottom: 100px;
+    }
+
+    &__subtitle {
+        color: white;
+        padding-top: 46px;
+    }
+    
+    &__title {
+        color: white;
+    }
+    
+    &__text--bold {
+        color: white;
+    }
+    
+    &__text {
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    &__description {
+        margin-left: 90px;
+    }
+    
+    .team__img-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        .img-wrapper__elem {
+            left: 0;
+//            transform: translate(-50%);
+        }
+    }
+}
+
+
+@media all and (max-width: 900px){
+    .team {
+        
+        img {
+            display: none;
+        }
+        
+        .img-wrapper {
+            display: none;
+            &__elem {
+                display: none;
+            }
+        }
+        
+        .description {
+            flex: 0 1 90%;
+            margin-left: 0;
+            
+        }
+        
+    }
+    
+}

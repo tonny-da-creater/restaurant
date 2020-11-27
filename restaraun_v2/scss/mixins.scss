@@ -1,0 +1,81 @@
+@mixin btn {
+    background-color: $main-color;
+    color: white;
+    font-size: 12px;
+    border-radius: 5px;
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: bold;
+    height: 60px;
+    cursor: pointer;
+    border: 0;
+}
+
+@mixin title {
+        text-transform: uppercase;
+        font-family: 'Banny';
+        position: relative;
+        padding-bottom: 15px;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            background-color: $main-color;
+            bottom: 0;
+            height: 5px;
+            width: 60px;
+            left: 50%;
+            transform: translate(-50%);
+            border-radius: 50px;
+        }
+}
+
+@mixin description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    flex: 0 1 50%;
+    
+    &__title {
+        @include title;
+        font-size: 36px;
+    }
+    
+    &__text--bold {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    
+    &__text {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: normal;
+        opacity: .9;
+    }
+}
+
+
+@mixin img-wrapper {
+    flex: 0 1 50%;
+    position: relative;
+        
+    img {
+        box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+    }
+    
+    &__elem {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        border: 20px solid #E8C300;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        top: 25%;
+    }
+}
+
+
